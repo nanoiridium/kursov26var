@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Статистический отчет</title>
+    </head>
+    <body bgcolor=silver text=black>
+        <h1>Статистический отчет</h1>
+        <form action="" method="post">
+            <label> Input ID
+                <input type="number" size="40" name="r_year">
+            </label>
+            <Br><input type="submit" value="Send">
+        </form>
+        {% if state == 0 %}
+            Статистический отчет создан<br>
+        {% endif %}
+        {% if state == 1 %}
+            Статистический отчет уже существует<br>
+        {% endif %}
+        <br>
+        <a href="/?ref=7_show"> Показать отчеты </a>
+        <br><br><br>
+        <a href="/?point=back"> Вернуться назад </a>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Запрос 1</title>
+    </head>
+    <body bgcolor=silver text=black>
+        <h1>Запрос 1</h1>
+        <table style="width:20%">
+            <tr>
+                <th align = left>iddrug</th>
+                <th align = left>drugName</th>
+                <th align = left>sumAmount</th>
+            </tr>
+            {% for client in Data %}
+            <tr>
+                <td>{{client["iddrug"]}}</td>
+                <td>{{client["drugName"]}}</td>
+                <td>{{client["sumAmount"]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br><br>
+        <a href="/?point=back"> Вернуться назад </a>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Запрос 3</title>
+    </head>
+    <body bgcolor=silver text=black>
+        <h1>Запрос 3</h1>
+        <form action="" method="post">
+            <label> Input ID
+                <input type="number" size="40" name="ID">
+            </label>
+            <Br><input type="submit" value="Send">
+        </form>
+        {% if Data %}
+        <table style="width:30%">
+            <tr>
+                <th align = left>idprovider</th>
+                <th align = left>providerName</th>
+                <th align = left>providerAddress</th>
+                <th align = left>contractDate</th>
+            </tr>
+            {% for client in Data %}
+            <tr>
+                <td>{{client["idprovider"]}}</td>
+                <td>{{client["providerName"]}}</td>
+                <td>{{client["providerAddress"]}}</td>
+                <td>{{client["contractDate"]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+        <br><br><br>
+        <a href="/?point=back"> Вернуться назад </a>
+    </body>
+</html>

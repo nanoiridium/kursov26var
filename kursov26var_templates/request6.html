@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Запрос 6</title>
+    </head>
+    <body bgcolor=silver text=black>
+        <h1>Запрос 6</h1>
+        <table style="width:30%">
+            <tr>
+                <th align = left>idprovider</th>
+                <th align = left>providerName</th>
+                <th align = left>providerAddress</th>
+                <th align = left>contractDate</th>
+            </tr>
+            {% for client in Data %}
+            <tr>
+                <td>{{client["idprovider"]}}</td>
+                <td>{{client["providerName"]}}</td>
+                <td>{{client["providerAddress"]}}</td>
+                <td>{{client["contractDate"]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br><br>
+        <a href="/?point=back"> Вернуться назад </a>
+    </body>
+</html>

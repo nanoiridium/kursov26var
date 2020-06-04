@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Текущие отчеты</title>
+    </head>
+    <body bgcolor=silver text=black>
+        <h1>Текущие отчеты</h1>
+        <table style="width:20%">
+            <tr>
+                <th align = left>providerName</th>
+                <th align = left>avgIncome</th>
+                <th align = left>year</th>
+            </tr>
+            {% for client in Data %}
+            <tr>
+                <td>{{client["providerName"]}}</td>
+                <td>{{client["avgIncome"]}}</td>
+                <td>{{client["year"]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br><br>
+        <a href="/?point=back"> Вернуться назад </a>
+    </body>
+</html>
